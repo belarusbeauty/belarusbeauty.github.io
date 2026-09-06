@@ -165,7 +165,7 @@
     });
   }
 
-  /* cookie consent -> GTM */
+  /* Google Tag Manager — loaded on every page load (no consent bar) */
   function loadGTM(id) {
     if (window.__gtm) return; window.__gtm = 1;
     (function (w, d, s, l, i) {
@@ -177,22 +177,7 @@
   }
   function initConsent() {
     var id = docEl.getAttribute('data-gtm-id');
-    var c;
-    try { c = localStorage.getItem('vesna-consent'); } catch (e) {}
-    if (c === 'accepted') { if (id) loadGTM(id); return; }
-    if (c === 'declined') return;
-    var bar = document.createElement('div');
-    bar.className = 'cookie-bar';
-    bar.setAttribute('role', 'dialog');
-    bar.setAttribute('aria-label', 'Cookie notice');
-    bar.innerHTML = '<p>We use a few cookies to see which pages people find useful. Nothing else.</p>' +
-      '<div class="cookie-bar__row"><button class="decline" type="button">Decline</button>' +
-      '<button class="accept" type="button">Accept</button></div>';
-    document.body.appendChild(bar);
-    bar.addEventListener('click', function (e) {
-      if (e.target.classList.contains('accept')) { try { localStorage.setItem('vesna-consent', 'accepted'); } catch (x) {} if (id) loadGTM(id); bar.remove(); }
-      if (e.target.classList.contains('decline')) { try { localStorage.setItem('vesna-consent', 'declined'); } catch (x) {} bar.remove(); }
-    });
+    if (id) loadGTM(id);
   }
 
   function ready(fn) { document.readyState !== 'loading' ? fn() : document.addEventListener('DOMContentLoaded', fn); }
