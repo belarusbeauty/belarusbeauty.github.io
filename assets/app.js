@@ -180,6 +180,17 @@
     if (id) loadGTM(id);
   }
 
+  /* team bios: click a card to expand */
+  function initTeam() {
+    document.querySelectorAll('[data-team-toggle]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var card = btn.closest('.team-card');
+        var open = card.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+  }
+
   function ready(fn) { document.readyState !== 'loading' ? fn() : document.addEventListener('DOMContentLoaded', fn); }
-  ready(function () { setHdr(); initReveal(); initSliders(); initForm(); initConsent(); });
+  ready(function () { setHdr(); initReveal(); initSliders(); initForm(); initConsent(); initTeam(); });
 })();
