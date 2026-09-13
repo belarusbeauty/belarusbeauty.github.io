@@ -127,7 +127,7 @@ h2 + .lede, h1 + .lede { margin-top: 0.6rem; }
 .brand__text { font-family: var(--f-head); font-weight: 700; color: var(--ink); line-height: 1; font-size: 1.28rem; letter-spacing: 0.01em; }
 .brand__text span { display: block; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose-deep); margin-top: 3px; }
 
-.nav { margin-left: auto; display: flex; align-items: center; gap: 1.6rem; }
+.nav { margin-left: auto; display: flex; align-items: center; gap: 2.1rem; }
 .nav a {
   font-size: var(--s-0); font-weight: 500; letter-spacing: 0.01em;
   text-decoration: none; color: var(--ink); white-space: nowrap; position: relative; padding: 5px 0;
@@ -155,7 +155,7 @@ h2 + .lede, h1 + .lede { margin-top: 0.6rem; }
 .btn--ghost:hover { background: var(--ink); color: var(--paper); }
 .btn--light { background: #fff; color: var(--rose-deep); border-color: #fff; }
 .btn--light:hover { background: var(--peach); color: var(--rose-deep); border-color: var(--peach); }
-.nav__book { margin-left: 0.5rem; padding: 0.72rem 1.35rem; letter-spacing: 0.05em; }
+.nav__book { margin-left: 0.5rem; padding: 0.72rem 1.35rem; letter-spacing: 0.05em; font-size: calc(var(--s--1) * 0.8); }
 .header__book { display: none; }
 .btn__arrow { transition: transform 0.18s var(--ease); }
 .btn:hover .btn__arrow { transform: translateX(3px); }
@@ -420,7 +420,7 @@ ul.tick li::before { content: ""; position: absolute; left: 0; top: 0.5em; width
 .cookie-bar .decline { background: transparent; color: var(--footer-ink); }
 
 /* ---------- team (click-to-expand) ---------- */
-.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 3vw, 2rem); }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 3vw, 2rem); align-items: start; }
 @media (max-width: 860px) { .team-grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; } }
 .team-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
 .team-card__btn { display: block; width: 100%; text-align: left; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: inherit; }
