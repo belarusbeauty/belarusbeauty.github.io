@@ -155,7 +155,7 @@ h2 + .lede, h1 + .lede { margin-top: 0.6rem; }
 .btn--ghost:hover { background: var(--ink); color: var(--paper); }
 .btn--light { background: #fff; color: var(--rose-deep); border-color: #fff; }
 .btn--light:hover { background: var(--peach); color: var(--rose-deep); border-color: var(--peach); }
-.nav__book { margin-left: 0.5rem; padding: 0.72rem 1.35rem; letter-spacing: 0.05em; font-size: calc(var(--s--1) * 0.8); }
+.nav .nav__book { margin-left: 0.5rem; padding: 0.94rem 1.76rem; letter-spacing: 0.05em; font-size: calc(var(--s--1) * 0.8); }
 .header__book { display: none; }
 .btn__arrow { transition: transform 0.18s var(--ease); }
 .btn:hover .btn__arrow { transform: translateX(3px); }
@@ -433,3 +433,5 @@ ul.tick li::before { content: ""; position: absolute; left: 0; top: 0.5em; width
 .team-card__bio { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease); }
 .team-card__bio-inner { padding: 0 1.25rem 1.25rem; color: var(--ink-soft); font-size: var(--s--1); line-height: 1.65; }
 .team-card.is-open .team-card__bio { max-height: 900px; }
+
+.nav .nav__book:hover, .nav .nav__book:focus-visible { color: #fff; }
