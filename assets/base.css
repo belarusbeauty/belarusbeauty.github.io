@@ -127,7 +127,7 @@ h2 + .lede, h1 + .lede { margin-top: 0.6rem; }
 .brand__text { font-family: var(--f-head); font-weight: 700; color: var(--ink); line-height: 1; font-size: 1.28rem; letter-spacing: 0.01em; }
 .brand__text span { display: block; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose-deep); margin-top: 3px; }
 
-.nav { margin-left: auto; display: flex; align-items: center; gap: 2.1rem; }
+.nav { margin-left: auto; display: flex; align-items: center; gap: 2.6rem; }
 .nav a {
   font-size: var(--s-0); font-weight: 500; letter-spacing: 0.01em;
   text-decoration: none; color: var(--ink); white-space: nowrap; position: relative; padding: 5px 0;
