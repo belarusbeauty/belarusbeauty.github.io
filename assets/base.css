@@ -442,3 +442,7 @@ ul.tick li::before { content: ""; position: absolute; left: 0; top: 0.5em; width
 .hero__media.slider img { border-radius: 0; box-shadow: none; }
 .hero__media .slider__nav { width: 44px; height: 44px; font-size: 1.5rem; }
 .footer__credit { max-width: none; margin: 1rem 0 0; padding: 0 var(--gut); text-align: center; color: var(--footer-mut); font-size: 0.78rem; }
+
+.footer__credit a { color: inherit; font-weight: 600; text-decoration: underline; text-decoration-color: currentColor; text-underline-offset: 4px; }
+.footer__credit a:hover { color: #fff; }
+.footer__credit a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; border-radius: 2px; }
