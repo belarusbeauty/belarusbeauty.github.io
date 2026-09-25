@@ -113,11 +113,46 @@
       var slides = track.children.length;
       if (slides < 2) return;
       var dots = s.querySelectorAll('.slider__dot');
-      var i = 0;
+      var i = 0, position = 1, busy = false, timer;
+      var first = track.firstElementChild.cloneNode(true);
+      var last = track.lastElementChild.cloneNode(true);
+      [first, last].forEach(function (el) {
+        el.setAttribute('aria-hidden', 'true');
+        el.removeAttribute('id');
+        if (el.tagName === 'IMG') el.loading = 'eager';
+      });
+      track.insertBefore(last, track.firstElementChild);
+      track.appendChild(first);
+      function place() { track.style.transform = 'translateX(' + (-position * 100) + '%)'; }
+      function snap() {
+        track.style.transition = 'none';
+        place();
+        void track.offsetWidth;
+        track.style.transition = '';
+      }
+      snap();
+      function finish() {
+        if (!busy) return;
+        clearTimeout(timer);
+        if (position === slides + 1) { position = 1; snap(); }
+        else if (position === 0) { position = slides; snap(); }
+        busy = false;
+      }
+      track.addEventListener('transitionend', function (e) {
+        if (e.target === track && e.propertyName === 'transform') finish();
+      });
       function go(n) {
+        if (busy) return;
+        position = n + 1;
         i = (n + slides) % slides;
-        track.style.transform = 'translateX(' + (-i * 100) + '%)';
-        dots.forEach(function (d, k) { d.classList.toggle('is-on', k === i); });
+        busy = true;
+        place();
+        dots.forEach(function (d, k) {
+          d.classList.toggle('is-on', k === i);
+          d.setAttribute('aria-current', k === i ? 'true' : 'false');
+        });
+        if (REDUCE) finish();
+        else timer = setTimeout(finish, 550);
       }
       var prev = s.querySelector('.slider__nav--prev');
       var next = s.querySelector('.slider__nav--next');
