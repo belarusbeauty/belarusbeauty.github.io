@@ -441,8 +441,8 @@ ul.tick li::before { content: ""; position: absolute; left: 0; top: 0.5em; width
 .hero__media.slider { min-width: 0; }
 .hero__media.slider img { border-radius: 0; box-shadow: none; }
 .hero__media .slider__nav { width: 44px; height: 44px; font-size: 1.5rem; }
-.footer__credit { max-width: 28ch; margin: 0.65rem 0 1rem; padding: 0; text-align: left; color: var(--footer-mut); font-size: 0.7rem; line-height: 1.6; }
+.footer__credit { max-width: none; margin: 0.65rem 0 0; padding: 0; text-align: left; color: #f5edef; font-size: 1rem; line-height: 1.6; }
 
-.footer__credit a { color: inherit; font-weight: 400; text-decoration: none; text-decoration-color: currentColor; text-underline-offset: 4px; }
+.footer__credit a { color: inherit; font-weight: 600; text-decoration: none; text-decoration-color: currentColor; text-underline-offset: 4px; }
 .footer__credit a:hover { color: #fff; text-decoration: underline; }
 .footer__credit a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; border-radius: 2px; }
