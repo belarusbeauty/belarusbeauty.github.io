@@ -436,3 +436,9 @@ ul.tick li::before { content: ""; position: absolute; left: 0; top: 0.5em; width
 .team-card.is-open .team-card__bio { max-height: 900px; }
 
 .nav .nav__book:hover, .nav .nav__book:focus-visible { color: #fff; }
+
+/* Home gallery */
+.hero__media.slider { min-width: 0; }
+.hero__media.slider img { border-radius: 0; box-shadow: none; }
+.hero__media .slider__nav { width: 44px; height: 44px; font-size: 1.5rem; }
+.footer__credit { max-width: none; margin: 1rem 0 0; padding: 0 var(--gut); text-align: center; color: var(--footer-mut); font-size: 0.78rem; }

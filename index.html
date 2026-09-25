@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://vesnabeautyspa.ca/assets/img/5aeeb0d747e859d83d65.png">
 <link rel="icon" href="/assets/img/068266f0e99e8226647d.png">
 <link rel="stylesheet" href="/assets/fonts.css">
-<link rel="stylesheet" href="/assets/base.css?v=20260924-header">
+<link rel="stylesheet" href="/assets/base.css?v=20260925-gallery">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DaySpa","@id":"https://vesnabeautyspa.ca/#business","name":"Vesna Beauty Spa","alternateName":"Vesna Spa Beautique","url":"https://vesnabeautyspa.ca/","telephone":"+1-672-755-3339","email":"relax@vesnaspa.ca","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"1400 Cowichan Bay Rd #13","addressLocality":"Cobble Hill","addressRegion":"BC","postalCode":"V0R 1L1","addressCountry":"CA"},"geo":{"@type":"GeoCoordinates","latitude":48.7108641,"longitude":-123.6103859},"hasMap":"https://www.google.com/maps/search/?api=1&query=1400+Cowichan+Bay+Rd+%2313%2C+Cobble+Hill+BC","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday"],"opens":"09:30","closes":"17:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday"],"opens":"09:30","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:30","closes":"17:00"}],"areaServed":[{"@type":"Place","name":"Cobble Hill"},{"@type":"Place","name":"Cowichan Bay"},{"@type":"Place","name":"Mill Bay"},{"@type":"Place","name":"Shawnigan Lake"},{"@type":"Place","name":"Duncan"},{"@type":"Place","name":"Cowichan Valley"}],"sameAs":["https://www.facebook.com/p/Vesna-Spa-Boutique-61567031257872","https://www.instagram.com/vesna_spa_bq","https://g.co/kgs/aP5fSDV"]}</script>
 </head>
 <body>
@@ -51,7 +51,18 @@
         <a class="btn btn--ghost" href="tel:+16727553339">Call 672 755 3339</a>
       </div>
     </div>
-    <div class="hero__media reveal"><img src="/assets/img/vesna-storefront.jpg" alt="Vesna Beauty Spa storefront on Cowichan Bay Road, Cobble Hill" width="1440" height="1080"></div>
+    <div class="hero__media slider reveal" data-slider role="region" aria-roledescription="carousel" aria-label="Explore our spa">
+<div class="slider__track">
+<img src="/assets/img/vesna-storefront.jpg" alt="Vesna Beauty Spa storefront on Cowichan Bay Road, Cobble Hill" width="1440" height="1080" fetchpriority="high">
+<img src="/assets/img/spa-treatment-blue.jpg" alt="Treatment room with forest mural and blue treatment bed" width="1440" height="1080" loading="lazy">
+<img src="/assets/img/spa-treatment-white.jpg" alt="Facial treatment room at Vesna Beauty Spa" width="1440" height="1080" loading="lazy">
+<img src="/assets/img/spa-lounge.jpg" alt="Spa lounge and reception seating" width="1440" height="1080" loading="lazy">
+<img src="/assets/img/spa-pedicure.jpg" alt="Pedicure seating at Vesna Beauty Spa" width="1440" height="1080" loading="lazy">
+</div>
+<button class="slider__nav slider__nav--prev" type="button" aria-label="Previous spa photo">&#8249;</button>
+<button class="slider__nav slider__nav--next" type="button" aria-label="Next spa photo">&#8250;</button>
+<div class="slider__dots"><button class="slider__dot is-on" type="button" aria-label="Show spa photo 1"></button><button class="slider__dot" type="button" aria-label="Show spa photo 2"></button><button class="slider__dot" type="button" aria-label="Show spa photo 3"></button><button class="slider__dot" type="button" aria-label="Show spa photo 4"></button><button class="slider__dot" type="button" aria-label="Show spa photo 5"></button></div>
+</div>
   </div>
 </section>
 
@@ -230,6 +241,7 @@
       <span>Serving Cobble Hill · Cowichan Bay · Mill Bay · Shawnigan Lake · Duncan</span>
     </div>
   </div>
+<p class="footer__credit">Website &amp; systems developed by Artur Business Solutions CA</p>
 </footer>
 <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none"><path d="M12 19V6M6 12l6-6 6 6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
