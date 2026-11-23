@@ -494,3 +494,5 @@ ul.tick li::before { content: ""; position: absolute; left: 0; top: 0.5em; width
 @media (max-width: 820px) { .event { grid-template-columns: 1fr; } .event__img { max-width: 360px; } }
 @media (max-width: 480px) { .event__gift ul { grid-template-columns: 1fr; } }
 .event__note { display: block; margin-top: 0.6rem; color: var(--ink-soft); font-size: var(--s--1); }
+.contact-list--wide div { grid-template-columns: 8.5rem 1fr; }
+@media (max-width: 480px) { .contact-list--wide div { grid-template-columns: 1fr; gap: 0.15rem; } }
